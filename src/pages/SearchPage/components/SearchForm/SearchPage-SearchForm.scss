@@ -1,0 +1,62 @@
+@import 'src/styles/variables', 'src/styles/breakpoints';
+
+.SearchForm {
+    &-Input {
+        @include media-breakpoint-up(md) {
+            width: 300px;
+        }
+        width: 150px;
+        height: 30px;
+        padding: 0 10px;
+
+        border: none;
+        outline: none;
+    }
+
+    &-Suggest {
+        padding: 10px;
+    }
+
+    &-Suggest:hover,
+    &_hovered {
+        background-color: $lightGrey;
+    }
+
+    &-IconBox {
+        display: flex;
+        width: 20px;
+        margin-right: 7px;
+
+        cursor: pointer;
+    }
+
+    &-Icon {
+        width: 100%;
+    }
+
+    &-InputBox {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+
+        border: 5px solid $lightBlue;
+        border-radius: $radius;
+    }
+
+    &-SuggestsList {
+        position: absolute;
+        z-index: -1;
+
+        @include media-breakpoint-up(md) {
+            width: 445px;
+        }
+        width: 292px;
+        margin-top: -20px;
+        padding: 30px 0 20px;
+
+        background-color: $white;
+        border-radius: 0 0 $radius $radius;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+}
