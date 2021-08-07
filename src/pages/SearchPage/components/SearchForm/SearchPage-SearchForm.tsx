@@ -18,7 +18,6 @@ import { useHandlSugget } from './SearchForm.hooks';
 import './SearchPage-SearchForm.scss';
 
 interface SearchFormProps {
-    className?: string;
     value: string;
     isVisible: boolean;
     setValue: Dispatch<SetStateAction<string>>;
@@ -30,7 +29,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
     setValue,
     isVisible,
     setVisibility
-}) => {
+}: SearchFormProps) => {
     const cnSearchForm = cn('SearchForm');
 
     const [suggestions, setSuggestions] = useState<Array<string>>([]);
@@ -73,7 +72,9 @@ const SearchForm: React.FC<SearchFormProps> = ({
         const newSuggestions =
             selectedData &&
             selectedData.filter(
-                (item: string) => value && item.startsWith(value)
+                (item: string) =>
+                    value.toLowerCase() &&
+                    item.toLowerCase().startsWith(value.toLowerCase())
             );
 
         setSuggestions(newSuggestions);
@@ -111,8 +112,11 @@ const SearchForm: React.FC<SearchFormProps> = ({
 
                 {isVisible && suggestions && suggestions.length > 0 && (
                     <div className={cnSearchForm('SuggestsList')}>
-                        {suggestions.map((item, index) => {
-                            const newItem = item.replace(value, '');
+                        {suggestions.map((item: string, index: number) => {
+                            value = value.toLowerCase();
+                            const newItem = item
+                                .toLowerCase()
+                                .replace(value, '');
 
                             return (
                                 <div
