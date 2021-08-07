@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mos-search-task/static/css/main.32689c2d.chunk.css",
+    "main.js": "/mos-search-task/static/js/main.6ef4aa43.chunk.js",
+    "main.js.map": "/mos-search-task/static/js/main.6ef4aa43.chunk.js.map",
+    "runtime-main.js": "/mos-search-task/static/js/runtime-main.7dfc8dd5.js",
+    "runtime-main.js.map": "/mos-search-task/static/js/runtime-main.7dfc8dd5.js.map",
+    "static/js/2.a2ae3689.chunk.js": "/mos-search-task/static/js/2.a2ae3689.chunk.js",
+    "static/js/2.a2ae3689.chunk.js.map": "/mos-search-task/static/js/2.a2ae3689.chunk.js.map",
+    "index.html": "/mos-search-task/index.html",
+    "precache-manifest.ded063a48a32f6e74608335395ad1445.js": "/mos-search-task/precache-manifest.ded063a48a32f6e74608335395ad1445.js",
+    "service-worker.js": "/mos-search-task/service-worker.js",
+    "static/css/main.32689c2d.chunk.css.map": "/mos-search-task/static/css/main.32689c2d.chunk.css.map",
+    "static/media/cross.svg": "/mos-search-task/static/media/cross.c1782b81.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7dfc8dd5.js",
+    "static/js/2.a2ae3689.chunk.js",
+    "static/css/main.32689c2d.chunk.css",
+    "static/js/main.6ef4aa43.chunk.js"
+  ]
+}
