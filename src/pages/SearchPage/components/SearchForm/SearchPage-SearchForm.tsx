@@ -119,14 +119,9 @@ const SearchForm: React.FC<SearchFormProps> = ({
                                 .replace(value, '');
 
                             return (
-                                <div
-                                    key={item}
-                                    onKeyPress={item => {
-                                        console.log(item);
-                                    }}
-                                >
+                                <div key={item}>
                                     {' '}
-                                    {
+                                    {index < 4 && (
                                         <div
                                             className={cnSearchForm('Suggest', [
                                                 cnSearchForm({
@@ -140,7 +135,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
                                             {value}
                                             <b>{newItem}</b>
                                         </div>
-                                    }
+                                    )}
                                 </div>
                             );
                         })}
